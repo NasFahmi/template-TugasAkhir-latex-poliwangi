@@ -19,14 +19,14 @@
 
 % Mengatur indentasi paragraf
 \usepackage{indentfirst}  % Memastikan paragraf pertama di setiap section memiliki indentasi
-\setlength\parindent{1cm} % Mengatur jarak indentasi paragraf menjadi 1 cm
+\setlength\parindent{1.25cm} % Mengatur jarak indentasi paragraf menjadi 1.25 cm
 
 % Mengatur font utama dokumen menjadi Times New Roman
 \usepackage{pslatex}
 
-% Mengatur format penomoran section dan subsection
-\renewcommand{\thesection}{\Alph{section}.\hspace{0.18cm}} % Section: A, B, C, ...
-\renewcommand{\thesubsection}{\arabic{subsection}.}         % Subsection: 1, 2, 3, ...
+% Pengaturan format penomoran section dan subsection
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}} % Section: 1.1, 1.2, 1.3, ...
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}} % Subsection: 1.1.1, 1.1.2, ...
 
 % Pengaturan daftar isi, daftar gambar, dan daftar tabel
 \usepackage{tocloft}
@@ -46,7 +46,7 @@
 
 % Pengaturan format dan penomoran judul bab
 \usepackage{titlesec}
-\titleformat{\chapter}{\doublespacing\fontsize{14pt}{16pt}\bfseries}{\MakeUppercase{\chaptertitlename\ \Roman{chapter}}\filcenter}{0.15cm}{\centering\uppercase}
+\titleformat{\chapter}{\doublespacing\fontsize{14pt}{16pt}\bfseries}{\MakeUppercase{\chaptertitlename\ \arabic{chapter}}\filcenter}{0.15cm}{\centering\uppercase}
 \titleformat{\section}{\fontsize{12}{14}\bfseries}{\thesection}{0.4cm}{}
 \titleformat{\subsection}{\fontsize{12}{14}\bfseries}{\thesubsection}{0.675cm}{}
 
@@ -80,10 +80,10 @@
 % Pengaturan margin halaman
 \usepackage{geometry}
 \geometry{
-    left=4cm,          % Margin kiri
-    top=3cm,           % Margin atas
-    right=3cm,         % Margin kanan
-    bottom=3cm,        % Margin bawah
+    left=3cm,          % Margin kiri
+    top=2cm,           % Margin atas
+    right=2cm,         % Margin kanan
+    bottom=2cm,        % Margin bawah
 }
 
 % Paket untuk notasi matematika
