@@ -1,0 +1,37 @@
+%==================================================================
+% File utama untuk kompilasi Proposal Tugas Akhir
+% Proposal terdiri dari BAB 1, BAB 2, dan BAB 3
+%==================================================================
+
+%% DILARANG EDIT BAGIAN INI
+\documentclass[12pt, a4paper, onecolumn, oneside, final]{report}
+
+\input{a0-identitas}
+\input{untouch/xx-preambles}
+\input{a1-database.hyphenate}
+
+\begin{document}
+
+\include{untouch/xx-sampul-proposal}
+\pagenumbering{roman}
+\include{untouch/xx-sampuldalam-proposal}
+\include{untouch/xx-persetujuan-proposal}
+
+\begin{spacing}{1.2}
+	\include{a2-abstrak}
+	\include{a3-abstract}
+	\include{untouch/xx-daftar}
+\end{spacing}
+
+\pagenumbering{arabic}
+
+\begin{spacing}{1.5}
+	\include{b1-bab1}
+	\include{b2-bab2}
+	\include{b3-bab3}
+\end{spacing}
+
+\input{untouch/xx-daftarpustaka}
+
+\end{document}
+%% DILARANG EDIT BAGIAN INI
