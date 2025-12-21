@@ -80,39 +80,36 @@ Template ini mendukung warna cover yang berbeda sesuai program studi Poliwangi. 
 
 ---
 
-## 🖥️ Panduan Penggunaan
+## 🖥️ Panduan Instalasi dan Penggunaan
 
-### Opsi 1: Overleaf (Direkomendasikan - Mudah & Online)
+> **Lihat panduan lengkap instalasi di [README utama](../README.md#-panduan-instalasi-dan-penggunaan)**
 
-1. **Upload ke Overleaf**:
-   - Buka [Overleaf](https://www.overleaf.com/)
-   - Klik **New Project** → **Upload Project**
-   - Upload folder `proposal` sebagai ZIP
-   - Atau import langsung dari GitHub
+### Quick Start - Overleaf (Paling Mudah) ☁️
 
-2. **Compile**:
-   - Overleaf akan otomatis compile
-   - File utama: `proposal.tex`
-   - Compiler: pdfLaTeX
+1. **Login ke Overleaf**: [https://www.overleaf.com/](https://www.overleaf.com/)
+2. **Upload Project**: New Project → Upload Project → Upload ZIP folder `proposal/`
+3. **Set Main File**: Menu (☰) → Main document → pilih `proposal.tex`
+4. **Compile**: Klik Recompile → PDF akan muncul
 
-### Opsi 2: Instalasi Lokal (Windows)
+### Quick Start - Lokal
 
-1. **Install MikTeX**: [https://miktex.org/download](https://miktex.org/download)
-   > Pilih *For All Users*, centang opsi *Always install missing packages*
-2. **Install TeXstudio**: [https://www.texstudio.org/](https://www.texstudio.org/)
-3. **Update MikTeX** melalui MikTeX Console
-4. **Buka** `proposal.tex` melalui TeXstudio
-5. Klik **Build & View** untuk melihat hasil kompilasi (`proposal.pdf`)
+#### Windows:
+1. Install MikTeX: [https://miktex.org/download](https://miktex.org/download)
+2. Install TeXstudio: [https://www.texstudio.org/](https://www.texstudio.org/)
+3. Buka `proposal.tex` di TeXstudio
+4. Klik **Build & View** (F5)
 
-### Opsi 3: MacOS dengan MacTeX
+#### MacOS:
+```bash
+brew install --cask mactex texstudio
+# Buka proposal.tex di TeXstudio, lalu Build & View
+```
 
-1. **Install MacTeX**: 
-   ```bash
-   brew install --cask mactex
-   ```
-2. **Install Texifier** atau **TeXstudio**
-3. **Buka** `proposal.tex`
-4. **Compile** dengan pdfLaTeX
+#### Linux:
+```bash
+sudo apt install texlive-full texstudio
+# Buka proposal.tex di TeXstudio, lalu Build & View
+```
 
 ---
 

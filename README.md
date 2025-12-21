@@ -104,39 +104,222 @@ Template ini mendukung warna cover yang berbeda sesuai program studi Poliwangi. 
 
 ---
 
-## 🖥️ Panduan Penggunaan
+## 🖥️ Panduan Instalasi dan Penggunaan
 
-### Opsi 1: Overleaf (Direkomendasikan - Mudah & Online)
+### Opsi 1: Overleaf (Direkomendasikan - Mudah & Online) ☁️
 
-1. **Upload ke Overleaf**:
+**Keuntungan:** Tidak perlu install apapun, langsung bisa dipakai online, kolaborasi mudah.
+
+#### Cara Upload ke Overleaf:
+
+1. **Daftar/Login Overleaf**:
    - Buka [Overleaf](https://www.overleaf.com/)
+   - Buat akun gratis atau login
+
+2. **Upload Project**:
    - Klik **New Project** → **Upload Project**
-   - Upload ZIP dari repository ini
-   - Atau import langsung dari GitHub
+   - Download repository ini sebagai ZIP dari GitHub
+   - Upload file ZIP ke Overleaf
+   
+   **ATAU** import langsung dari GitHub:
+   - Klik **New Project** → **Import from GitHub**
+   - Pilih repository: `template-TugasAkhir-latex-poliwangi`
+   - Pilih folder `Project` atau `proposal` sesuai kebutuhan
 
-2. **Compile**:
-   - Overleaf akan otomatis compile
-   - File utama: `Project/laporan.tex`
-   - Compiler: pdfLaTeX
+3. **Set Main File & Compile**:
+   - Klik menu di kiri atas (☰)
+   - Pilih **Main document** → pilih `laporan.tex` (untuk laporan) atau `proposal.tex` (untuk proposal)
+   - Compiler akan otomatis: **pdfLaTeX**
+   - Klik **Recompile** untuk generate PDF
 
-### Opsi 2: Instalasi Lokal (Windows)
+4. **Edit dan Preview**:
+   - Edit file `.tex` di panel kiri
+   - Preview PDF akan muncul di panel kanan
+   - Auto-compile saat save (jika diaktifkan)
 
-1. **Install MikTeX**: [https://miktex.org/download](https://miktex.org/download)
-   > Pilih *For All Users*, centang opsi *Always install missing packages*
-2. **Install TeXstudio**: [https://www.texstudio.org/](https://www.texstudio.org/)
-3. **Update MikTeX** melalui MikTeX Console
-4. **Clone/unduh** repositori dan buka `laporan.tex` melalui TeXstudio
-5. Klik **Build & View** untuk melihat hasil kompilasi (`laporan.pdf`)
+---
 
-### Opsi 3: MacOS dengan MacTeX
+### Opsi 2: Instalasi Lokal Windows 🪟
 
-1. **Install MacTeX**: 
+#### Langkah 1: Install MikTeX (LaTeX Distribution)
+
+1. **Download MikTeX**:
+   - Buka [https://miktex.org/download](https://miktex.org/download)
+   - Download **MikTeX Installer** untuk Windows
+
+2. **Install MikTeX**:
+   - Jalankan installer
+   - Pilih **Install for All Users** (recommended)
+   - **PENTING:** Centang opsi **"Always install missing packages on-the-fly"**
+   - Ikuti wizard instalasi sampai selesai
+   - Install size: ~300-400 MB
+
+3. **Update MikTeX** (Penting!):
+   - Buka **MikTeX Console** dari Start Menu
+   - Klik **Check for updates**
+   - Klik **Update now** untuk update semua packages
+   - Tunggu sampai selesai (~10-30 menit tergantung internet)
+
+#### Langkah 2: Install TeXstudio (Editor)
+
+1. **Download TeXstudio**:
+   - Buka [https://www.texstudio.org/](https://www.texstudio.org/)
+   - Download versi terbaru untuk Windows
+
+2. **Install TeXstudio**:
+   - Jalankan installer
+   - Ikuti wizard instalasi (Next → Next → Install)
+   - Install size: ~100 MB
+
+#### Langkah 3: Gunakan Template
+
+1. **Download/Clone Repository**:
+   - Clone repository atau download sebagai ZIP
+   - Extract ke folder pilihan Anda
+
+2. **Buka di TeXstudio**:
+   - Buka TeXstudio
+   - Klik **File** → **Open**
+   - Navigate ke folder `Project/` dan buka `laporan.tex`
+   - ATAU ke folder `proposal/` dan buka `proposal.tex`
+
+3. **Compile**:
+   - Klik tombol **Build & View** (F5) atau tombol ▶️ hijau
+   - PDF akan muncul di panel sebelah kanan
+   - Jika ada error package missing, MikTeX akan auto-download
+
+4. **Tips TeXstudio**:
+   - **Auto-complete:** Ketik `\` untuk melihat suggestions
+   - **Spell check:** Aktifkan di Options → Configure TeXstudio → Language Checking
+   - **Split View:** View → Split View Vertically untuk lihat code & PDF bersamaan
+
+---
+
+### Opsi 3: MacOS dengan MacTeX 🍎
+
+#### Langkah 1: Install MacTeX (LaTeX Distribution)
+
+**Via Homebrew (Recommended):**
+
+```bash
+# Install Homebrew dulu jika belum ada
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install MacTeX (Full version ~4.5 GB)
+brew install --cask mactex
+
+# Atau install BasicTeX (Minimal version ~100 MB)
+brew install --cask basictex
+```
+
+**Via Download Manual:**
+- Buka [https://www.tug.org/mactex/](https://www.tug.org/mactex/)
+- Download **MacTeX.pkg** (~4.5 GB)
+- Install dengan double-click file .pkg
+- Ikuti wizard instalasi
+
+**Setelah Install:**
+```bash
+# Update TeX Live Manager
+sudo tlmgr update --self
+sudo tlmgr update --all
+```
+
+#### Langkah 2: Install Editor (Pilih Salah Satu)
+
+**A. Texifier (Recommended untuk Mac - Berbayar tapi bagus)**
+- Download dari [Mac App Store](https://apps.apple.com/app/texifier/id458609333)
+- Harga: ~$30 (one-time purchase)
+- Live Preview, iCloud sync, dark mode support
+
+**B. TeXstudio (Gratis & Open Source)**
+```bash
+brew install --cask texstudio
+```
+
+**C. Visual Studio Code + LaTeX Workshop (Gratis)**
+```bash
+# Install VS Code
+brew install --cask visual-studio-code
+
+# Buka VS Code, install extension "LaTeX Workshop"
+```
+
+#### Langkah 3: Gunakan Template
+
+1. **Download/Clone Repository**:
    ```bash
-   brew install --cask mactex
+   cd ~/Documents
+   git clone https://github.com/codelabs-poliwangi/template-TugasAkhir-latex-poliwangi.git
+   cd template-TugasAkhir-latex-poliwangi
    ```
-2. **Install Texifier** atau **TeXstudio**
-3. **Buka** `Project/laporan.tex`
-4. **Compile** dengan pdfLaTeX
+
+2. **Buka dengan Editor**:
+   - **Texifier:** File → Open → pilih `Project/laporan.tex` atau `proposal/proposal.tex`
+   - **TeXstudio:** Same as Windows
+   - **VS Code:** Open folder, lalu buka file `.tex`, tekan `Cmd+S` untuk compile
+
+3. **Compile**:
+   - **Texifier:** Otomatis compile saat save
+   - **TeXstudio:** Klik Build & View (⌘+B)
+   - **VS Code:** Auto-build saat save, atau klik "Build LaTeX project"
+
+---
+
+### Opsi 4: Linux (Ubuntu/Debian) 🐧
+
+#### Install TeX Live dan TeXstudio:
+
+```bash
+# Update package list
+sudo apt update
+
+# Install TeX Live Full
+sudo apt install texlive-full
+
+# Install TeXstudio
+sudo apt install texstudio
+
+# Atau install packages minimal
+sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra
+```
+
+#### Gunakan Template:
+```bash
+# Clone repository
+git clone https://github.com/codelabs-poliwangi/template-TugasAkhir-latex-poliwangi.git
+cd template-TugasAkhir-latex-poliwangi/Project
+
+# Compile via command line
+pdflatex laporan.tex
+bibtex laporan
+pdflatex laporan.tex
+pdflatex laporan.tex
+
+# Atau buka di TeXstudio
+texstudio laporan.tex
+```
+
+---
+
+### 📋 Troubleshooting
+
+#### Missing Packages Error:
+- **MikTeX (Windows):** Pastikan "install packages on-the-fly" aktif di MikTeX Console
+- **MacTeX:** Jalankan `sudo tlmgr install <package-name>`
+- **Linux:** Jalankan `sudo apt install texlive-<package-name>`
+
+#### Error "Command not found":
+- Restart terminal/computer setelah install
+- Tambahkan ke PATH: 
+  - Windows: MikTeX biasanya auto-add
+  - Mac: `/Library/TeX/texbin`
+  - Linux: `/usr/bin`
+
+#### PDF Tidak Muncul:
+- Compile 2-3 kali untuk references & table of contents
+- Check error log di bagian bawah editor
+- Pastikan tidak ada syntax error di file .tex
 
 ---
 
